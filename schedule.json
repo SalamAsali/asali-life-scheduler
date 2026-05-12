@@ -52,5 +52,205 @@
     "publish_time": "2026-05-14T11:00:00-04:00",
     "notion_page_id": "32d0de74b1cf8195b715dfaec1c4da7b",
     "status": "pending"
+  },
+  {
+    "id": "muhammad-ali",
+    "speaker": "Muhammad Ali",
+    "caption": "\"I hated every minute of training, but I said, Don't quit. Suffer now and live the rest of your life as a champion.\" \u2014 Muhammad Ali\n\n#muhammadali #champion #training #discipline #asalilife #neverquit",
+    "video_file": "muhammad-ali.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-14T17:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8146-bfd7-c56a860698e1",
+    "status": "pending"
+  },
+  {
+    "id": "nelson-mandela",
+    "speaker": "Nelson Mandela",
+    "caption": "\"It always seems impossible until it's done.\" \u2014 Nelson Mandela. Every great achievement was once considered impossible.\n\n#nelsonmandela #impossible #persistence #asalilife #motivation",
+    "video_file": "nelson-mandela.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-14T21:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-81f9-8423-ffbd23de70ee",
+    "status": "pending"
+  },
+  {
+    "id": "bruce-lee",
+    "speaker": "Bruce Lee",
+    "caption": "\"Do not pray for an easy life, pray for the strength to endure a difficult one.\" \u2014 Bruce Lee\n\n#brucelee #strength #endurance #martialarts #asalilife #mindset",
+    "video_file": "bruce-lee.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-15T15:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8130-a839-f9552715c369",
+    "status": "pending"
+  },
+  {
+    "id": "walt-disney",
+    "speaker": "Walt Disney",
+    "caption": "\"All our dreams can come true, if we have the courage to pursue them.\" \u2014 Walt Disney\n\n#waltdisney #dreams #courage #imagination #asalilife #dreambig",
+    "video_file": "walt-disney.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-15T17:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-81d6-9a0c-d11109600c1b",
+    "status": "pending"
+  },
+  {
+    "id": "albert-einstein",
+    "speaker": "Albert Einstein",
+    "caption": "\"In the middle of difficulty lies opportunity.\" \u2014 Albert Einstein\n\n#einstein #opportunity #difficulty #genius #asalilife #mindset",
+    "video_file": "albert-einstein.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-15T21:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8159-b9b1-f6d5589791ea",
+    "status": "pending"
+  },
+  {
+    "id": "mlk",
+    "speaker": "Martin Luther King Jr.",
+    "caption": "\"If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward.\" \u2014 Martin Luther King Jr.\n\n#mlk #keepgoing #forward #civilrights #asalilife #motivation",
+    "video_file": "mlk.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-16T15:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-81d0-8fbd-e70b441d4658",
+    "status": "pending"
+  },
+  {
+    "id": "will-smith",
+    "speaker": "Will Smith",
+    "caption": "\"The only thing that I see that is distinctly different about me is I'm not afraid to die on a treadmill. You might be more talented, but I will outwork you.\" \u2014 Will Smith\n\n#willsmith #outwork #grind #hustle #asalilife #workethic",
+    "video_file": "will-smith.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-16T17:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8186-be6e-c486241894f5",
+    "status": "pending"
+  },
+  {
+    "id": "dwayne-johnson",
+    "speaker": "Dwayne Johnson",
+    "caption": "\"Success isn't always about greatness. It's about consistency. Consistent hard work gains success. Greatness will come.\" \u2014 Dwayne Johnson\n\n#therock #consistency #hardwork #success #asalilife #grind",
+    "video_file": "dwayne-johnson.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-16T21:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8163-b4fd-d2eebb9a11a0",
+    "status": "pending"
+  },
+  {
+    "id": "conor-mcgregor",
+    "speaker": "Conor McGregor",
+    "caption": "\"We're not just here to take part. We're here to take over.\" \u2014 Conor McGregor\n\n#conormcgregor #takeover #ufc #champion #asalilife #fearless",
+    "video_file": "conor-mcgregor.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-17T15:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-811e-b36f-eda4cb34d3df",
+    "status": "pending"
+  },
+  {
+    "id": "jay-z",
+    "speaker": "Jay-Z",
+    "caption": "\"Everybody look at you strange, say you changed. Like you worked that hard to stay the same.\" \u2014 Jay-Z\n\n#jayz #growth #evolution #hiphop #asalilife #change",
+    "video_file": "jay-z.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-17T17:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-817f-94c2-fc708158f99e",
+    "status": "pending"
+  },
+  {
+    "id": "bob-marley",
+    "speaker": "Bob Marley",
+    "caption": "\"You never know how strong you are until being strong is your only choice.\" \u2014 Bob Marley\n\n#bobmarley #strength #resilience #onelove #asalilife #nevergiveup",
+    "video_file": "bob-marley.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-17T21:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-81d9-ac09-c244f0169864",
+    "status": "pending"
+  },
+  {
+    "id": "winston-churchill",
+    "speaker": "Winston Churchill",
+    "caption": "\"Success is not final, failure is not fatal. It is the courage to continue that counts.\" \u2014 Winston Churchill\n\n#churchill #courage #success #failure #asalilife #keepgoing",
+    "video_file": "winston-churchill.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-18T15:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8137-a37b-e255cff4636b",
+    "status": "pending"
+  },
+  {
+    "id": "theodore-roosevelt",
+    "speaker": "Theodore Roosevelt",
+    "caption": "\"It is not the critic who counts. The credit belongs to the man who is actually in the arena.\" \u2014 Theodore Roosevelt\n\n#roosevelt #arena #critics #action #asalilife #doers",
+    "video_file": "theodore-roosevelt.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-18T17:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-81ed-81bd-eaa24f61b6c8",
+    "status": "pending"
+  },
+  {
+    "id": "mark-twain",
+    "speaker": "Mark Twain",
+    "caption": "\"The two most important days in your life are the day you are born and the day you find out why.\" \u2014 Mark Twain\n\n#marktwain #purpose #meaning #life #asalilife #findyourwhy",
+    "video_file": "mark-twain.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-18T21:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-81c3-b363-c2fed93061cc",
+    "status": "pending"
+  },
+  {
+    "id": "steve-harvey",
+    "speaker": "Steve Harvey",
+    "caption": "\"Do not ignore the passion that burns in you. Spend time to discover your gift.\" \u2014 Steve Harvey\n\n#steveharvey #passion #gift #purpose #asalilife #followyourdreams",
+    "video_file": "steve-harvey.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-19T15:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8117-bd50-e74588f78f38",
+    "status": "pending"
+  },
+  {
+    "id": "tony-robbins",
+    "speaker": "Tony Robbins",
+    "caption": "\"It's not about the goal. It's about becoming the type of person that can accomplish the goal.\" \u2014 Tony Robbins\n\n#tonyrobbins #growth #goals #identity #asalilife #selfdevelopment",
+    "video_file": "tony-robbins.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-19T17:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-81df-ae68-c9a8f6051b12",
+    "status": "pending"
+  },
+  {
+    "id": "gary-vee",
+    "speaker": "Gary Vaynerchuk",
+    "caption": "\"Skills are cheap. Passion is priceless.\" \u2014 Gary Vaynerchuk\n\n#garyvee #passion #skills #hustle #asalilife #entrepreneur",
+    "video_file": "gary-vee.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-19T21:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-812b-8823-d391ae752e16",
+    "status": "pending"
+  },
+  {
+    "id": "barack-obama",
+    "speaker": "Barack Obama",
+    "caption": "\"The best way to not feel hopeless is to get up and do something. Don't wait for good things to happen to you.\" \u2014 Barack Obama\n\n#obama #action #hope #leadership #asalilife #dosomething",
+    "video_file": "barack-obama.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-20T15:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8177-82a2-fba77a5bee00",
+    "status": "pending"
+  },
+  {
+    "id": "mike-tyson",
+    "speaker": "Mike Tyson",
+    "caption": "\"Everyone has a plan until they get punched in the mouth.\" \u2014 Mike Tyson\n\n#miketyson #boxing #reality #toughness #asalilife #fighter",
+    "video_file": "mike-tyson.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-20T17:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-8164-ba96-c39941e7f426",
+    "status": "pending"
+  },
+  {
+    "id": "eminem",
+    "speaker": "Eminem",
+    "caption": "\"If you had one shot, one opportunity to seize everything you ever wanted, would you capture it or just let it slip?\" \u2014 Eminem\n\n#eminem #loseself #oneshot #opportunity #asalilife #seizetheday",
+    "video_file": "eminem.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-20T21:00:00-04:00",
+    "notion_page_id": "35e0de74-b1cf-818b-a47a-c6c7071620c9",
+    "status": "pending"
   }
 ]

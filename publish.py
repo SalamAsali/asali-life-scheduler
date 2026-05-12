@@ -1,7 +1,7 @@
 """
 Asali.Life Instagram & Facebook Auto-Publisher
 Reads schedule.json, publishes any pending posts whose time has passed.
-Runs via GitHub Actions cron.
+Runs via GitHub Actions cron. Supports both video reels and image posts.
 """
 
 import json
@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 TOKEN = os.environ["META_PAGE_ACCESS_TOKEN"]
 IG_ID = os.environ["INSTAGRAM_BUSINESS_ACCOUNT_ID"]
 PAGE_ID = os.environ["META_PAGE_ID"]
+REPO = "SalamAsali/asali-life-scheduler"
 
 SCHEDULE_FILE = os.path.join(os.path.dirname(__file__), "schedule.json")
 
@@ -42,22 +43,32 @@ def api_get(url):
     return json.loads(resp.read())
 
 
-def publish_to_instagram(video_url, caption):
+def get_media_url(post):
+    """Get the public URL for the media file."""
+    if "video_file_id" in post:
+        return f"https://drive.google.com/uc?export=download&id={post['video_file_id']}"
+    elif "video_file" in post:
+        return f"https://raw.githubusercontent.com/{REPO}/main/videos/{post['video_file']}"
+    elif "image_file" in post:
+        return f"https://raw.githubusercontent.com/{REPO}/main/images/{post['image_file']}"
+    return None
+
+
+def publish_to_instagram(media_url, caption, media_type="REELS"):
     """Create container, wait for processing, publish."""
-    print(f"  [IG] Creating container...")
-    result = api_post(
-        f"https://graph.facebook.com/v25.0/{IG_ID}/media",
-        {
-            "media_type": "REELS",
-            "video_url": video_url,
-            "caption": caption,
-            "access_token": TOKEN,
-        },
-    )
+    print(f"  [IG] Creating container ({media_type})...")
+
+    params = {"caption": caption, "access_token": TOKEN}
+    if media_type == "REELS":
+        params["media_type"] = "REELS"
+        params["video_url"] = media_url
+    else:
+        params["image_url"] = media_url
+
+    result = api_post(f"https://graph.facebook.com/v25.0/{IG_ID}/media", params)
     container_id = result["id"]
     print(f"  [IG] Container: {container_id}")
 
-    # Poll for processing
     for i in range(120):
         status = api_get(
             f"https://graph.facebook.com/v25.0/{container_id}"
@@ -75,14 +86,12 @@ def publish_to_instagram(video_url, caption):
         print(f"  [IG] Timeout waiting for processing")
         return None
 
-    # Publish
     pub = api_post(
         f"https://graph.facebook.com/v25.0/{IG_ID}/media_publish",
         {"creation_id": container_id, "access_token": TOKEN},
     )
     media_id = pub["id"]
 
-    # Get permalink
     verify = api_get(
         f"https://graph.facebook.com/v25.0/{media_id}"
         f"?fields=permalink&access_token={TOKEN}"
@@ -92,17 +101,19 @@ def publish_to_instagram(video_url, caption):
     return permalink
 
 
-def publish_to_facebook(video_url, caption):
-    """Post video to Facebook Page."""
+def publish_to_facebook(media_url, caption, media_type="REELS"):
+    """Post to Facebook Page."""
     print(f"  [FB] Publishing...")
-    result = api_post(
-        f"https://graph.facebook.com/v25.0/{PAGE_ID}/videos",
-        {
-            "file_url": video_url,
-            "description": caption,
-            "access_token": TOKEN,
-        },
-    )
+    if media_type == "REELS":
+        result = api_post(
+            f"https://graph.facebook.com/v25.0/{PAGE_ID}/videos",
+            {"file_url": media_url, "description": caption, "access_token": TOKEN},
+        )
+    else:
+        result = api_post(
+            f"https://graph.facebook.com/v25.0/{PAGE_ID}/photos",
+            {"url": media_url, "message": caption, "access_token": TOKEN},
+        )
     fb_id = result.get("id", "")
     print(f"  [FB] Published: {fb_id}")
     return fb_id
@@ -123,13 +134,14 @@ def main():
 
         if now >= publish_time:
             print(f"\n=== Publishing: {post['speaker']} ===")
-            video_url = (
-                f"https://drive.google.com/uc?export=download"
-                f"&id={post['video_file_id']}"
-            )
+            media_url = get_media_url(post)
+            if not media_url:
+                print(f"  No media URL found, skipping")
+                continue
 
-            ig_link = publish_to_instagram(video_url, post["caption"])
-            fb_id = publish_to_facebook(video_url, post["caption"])
+            media_type = post.get("media_type", "REELS")
+            ig_link = publish_to_instagram(media_url, post["caption"], media_type)
+            fb_id = publish_to_facebook(media_url, post["caption"], media_type)
 
             if ig_link:
                 post["status"] = "published"

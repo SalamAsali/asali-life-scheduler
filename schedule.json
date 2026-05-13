@@ -258,5 +258,329 @@
     "publish_time": "2026-05-20T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-818b-a47a-c6c7071620c9",
     "status": "pending"
+  },
+  {
+    "id": "serena-williams",
+    "speaker": "Serena Williams",
+    "caption": "\"I've had to learn to fight all my life. Got to learn to keep smiling. If you smile, things will work out.\" \u2014 Serena Williams\n\n#serenawilliams #fighter #smile #tennis #asalilife #strength",
+    "video_file": "serena-williams.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-21T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "lebron-james",
+    "speaker": "LeBron James",
+    "caption": "\"I like criticism. It makes you strong.\" \u2014 LeBron James\n\n#lebronjames #criticism #strength #nba #asalilife #mentality",
+    "video_file": "lebron-james.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-21T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "tom-brady",
+    "speaker": "Tom Brady",
+    "caption": "\"I didn't come this far to only come this far.\" \u2014 Tom Brady\n\n#tombrady #goat #nfl #relentless #asalilife #keepgoing",
+    "video_file": "tom-brady.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-21T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "tupac",
+    "speaker": "Tupac Shakur",
+    "caption": "\"Reality is wrong. Dreams are for real.\" \u2014 Tupac Shakur\n\n#tupac #dreams #reality #hiphop #asalilife #dreamer",
+    "video_file": "tupac.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-22T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "nipsey-hussle",
+    "speaker": "Nipsey Hussle",
+    "caption": "\"The highest human act is to inspire.\" \u2014 Nipsey Hussle\n\n#nipseyhussle #inspire #legacy #marathon #asalilife #themarathoncontinues",
+    "video_file": "nipsey-hussle.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-22T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "kevin-hart",
+    "speaker": "Kevin Hart",
+    "caption": "\"Everybody wants to be famous, but nobody wants to do the work. I live by that.\" \u2014 Kevin Hart\n\n#kevinhart #work #famous #grind #asalilife #noexcuses",
+    "video_file": "kevin-hart.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-22T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "morgan-freeman",
+    "speaker": "Morgan Freeman",
+    "caption": "\"Don't be different just for different's sake. If you see it differently, function that way. Follow your own muse, always.\" \u2014 Morgan Freeman\n\n#morganfreeman #authentic #beyourself #wisdom #asalilife #originality",
+    "video_file": "morgan-freeman.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-23T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "keanu-reeves",
+    "speaker": "Keanu Reeves",
+    "caption": "\"Tomorrow isn't promised to anyone. Every day is a gift, treat it like one.\" \u2014 Keanu Reeves\n\n#keanureeves #grateful #present #gift #asalilife #livetoday",
+    "video_file": "keanu-reeves.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-23T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "maya-angelou",
+    "speaker": "Maya Angelou",
+    "caption": "\"We delight in the beauty of the butterfly, but rarely admit the changes it has gone through to achieve that beauty.\" \u2014 Maya Angelou\n\n#mayaangelou #transformation #beauty #growth #asalilife #change",
+    "video_file": "maya-angelou.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-23T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "gandhi",
+    "speaker": "Mahatma Gandhi",
+    "caption": "\"Be the change that you wish to see in the world.\" \u2014 Mahatma Gandhi\n\n#gandhi #change #world #peace #asalilife #bethechange",
+    "video_file": "gandhi.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-24T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "abraham-lincoln",
+    "speaker": "Abraham Lincoln",
+    "caption": "\"The best way to predict your future is to create it.\" \u2014 Abraham Lincoln\n\n#abrahamlincoln #future #create #leadership #asalilife #destiny",
+    "video_file": "abraham-lincoln.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-24T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "malcolm-x",
+    "speaker": "Malcolm X",
+    "caption": "\"Education is the passport to the future, for tomorrow belongs to those who prepare for it today.\" \u2014 Malcolm X\n\n#malcolmx #education #future #prepare #asalilife #knowledge",
+    "video_file": "malcolm-x.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-24T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "warren-buffett",
+    "speaker": "Warren Buffett",
+    "caption": "\"The most important investment you can make is in yourself.\" \u2014 Warren Buffett\n\n#warrenbuffett #invest #yourself #wealth #asalilife #selfinvestment",
+    "video_file": "warren-buffett.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-25T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "henry-ford",
+    "speaker": "Henry Ford",
+    "caption": "\"Whether you think you can, or you think you can't, you're right.\" \u2014 Henry Ford\n\n#henryford #mindset #believe #possible #asalilife #mentality",
+    "video_file": "henry-ford.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-25T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "jeff-bezos",
+    "speaker": "Jeff Bezos",
+    "caption": "\"In the end, we are our choices. Build yourself a great story.\" \u2014 Jeff Bezos\n\n#jeffbezos #choices #story #amazon #asalilife #legacy",
+    "video_file": "jeff-bezos.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-25T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "jim-rohn",
+    "speaker": "Jim Rohn",
+    "caption": "\"Don't wish it were easier. Wish you were better.\" \u2014 Jim Rohn\n\n#jimrohn #better #growth #discipline #asalilife #selfimprovement",
+    "video_file": "jim-rohn.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-26T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "eric-thomas",
+    "speaker": "Eric Thomas",
+    "caption": "\"When you want to succeed as bad as you want to breathe, then you'll be successful.\" \u2014 Eric Thomas\n\n#ericthomas #success #breathe #hungry #asalilife #etthehiphoppreacher",
+    "video_file": "eric-thomas.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-26T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "zig-ziglar",
+    "speaker": "Zig Ziglar",
+    "caption": "\"You don't have to be great to start, but you have to start to be great.\" \u2014 Zig Ziglar\n\n#zigziglar #start #great #action #asalilife #juststart",
+    "video_file": "zig-ziglar.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-26T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "simon-sinek",
+    "speaker": "Simon Sinek",
+    "caption": "\"Working hard for something we don't care about is called stress. Working hard for something we love is called passion.\" \u2014 Simon Sinek\n\n#simonsinek #passion #purpose #startwithwhy #asalilife #leadership",
+    "video_file": "simon-sinek.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-27T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "brene-brown",
+    "speaker": "Brene Brown",
+    "caption": "\"Vulnerability is not winning or losing. It's having the courage to show up when you can't control the outcome.\" \u2014 Brene Brown\n\n#brenebrown #vulnerability #courage #showup #asalilife #bravery",
+    "video_file": "brene-brown.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-27T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "lady-gaga",
+    "speaker": "Lady Gaga",
+    "caption": "\"Do not allow people to dim your shine because they are blinded. Tell them to put on some sunglasses.\" \u2014 Lady Gaga\n\n#ladygaga #shine #confidence #bold #asalilife #beyourself",
+    "video_file": "lady-gaga.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-27T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "rihanna",
+    "speaker": "Rihanna",
+    "caption": "\"People are gonna talk whether you're doing bad or good.\" \u2014 Rihanna\n\n#rihanna #haters #unbothered #boss #asalilife #keepgoing",
+    "video_file": "rihanna.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-28T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "drake",
+    "speaker": "Drake",
+    "caption": "\"Sometimes it's the journey that teaches you a lot about your destination.\" \u2014 Drake\n\n#drake #journey #destination #growth #asalilife #process",
+    "video_file": "drake.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-28T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "chris-rock",
+    "speaker": "Chris Rock",
+    "caption": "\"I have no idea what I'm doing but incompetence has never prevented me from plunging in with enthusiasm.\" \u2014 Chris Rock\n\n#chrisrock #enthusiasm #justdoit #comedy #asalilife #action",
+    "video_file": "chris-rock.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-28T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "helen-keller",
+    "speaker": "Helen Keller",
+    "caption": "\"Life is either a daring adventure or nothing at all.\" \u2014 Helen Keller\n\n#helenkeller #adventure #daring #courage #asalilife #lifeisshort",
+    "video_file": "helen-keller.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-29T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "usain-bolt",
+    "speaker": "Usain Bolt",
+    "caption": "\"I don't think limits.\" \u2014 Usain Bolt\n\n#usainbolt #nolimits #fastest #champion #asalilife #unlimited",
+    "video_file": "usain-bolt.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-29T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "michael-phelps",
+    "speaker": "Michael Phelps",
+    "caption": "\"There will be obstacles. There will be doubters. There will be mistakes. But with hard work, there are no limits.\" \u2014 Michael Phelps\n\n#michaelphelps #nolimits #swimming #hardwork #asalilife #goat",
+    "video_file": "michael-phelps.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-29T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "grant-cardone",
+    "speaker": "Grant Cardone",
+    "caption": "\"Success is your duty, obligation, and responsibility.\" \u2014 Grant Cardone\n\n#grantcardone #10x #success #duty #asalilife #noexcuses",
+    "video_file": "grant-cardone.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-30T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "naval-ravikant",
+    "speaker": "Naval Ravikant",
+    "caption": "\"Desire is a contract you make with yourself to be unhappy until you get what you want.\" \u2014 Naval Ravikant\n\n#navalravikant #desire #wisdom #philosophy #asalilife #deepthoughts",
+    "video_file": "naval-ravikant.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-30T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "ray-dalio",
+    "speaker": "Ray Dalio",
+    "caption": "\"Pain plus reflection equals progress.\" \u2014 Ray Dalio\n\n#raydalio #pain #progress #reflection #asalilife #principles",
+    "video_file": "ray-dalio.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-30T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "beyonce",
+    "speaker": "Beyonce",
+    "caption": "\"Power is not given to you. You have to take it.\" \u2014 Beyonce\n\n#beyonce #power #queenb #takeit #asalilife #boss",
+    "video_file": "beyonce.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-31T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "mother-teresa",
+    "speaker": "Mother Teresa",
+    "caption": "\"If you judge people, you have no time to love them.\" \u2014 Mother Teresa\n\n#motherteresa #love #nojudgment #compassion #asalilife #kindness",
+    "video_file": "mother-teresa.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-31T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "marcus-aurelius",
+    "speaker": "Marcus Aurelius",
+    "caption": "\"The happiness of your life depends upon the quality of your thoughts.\" \u2014 Marcus Aurelius\n\n#marcusaurelius #stoic #thoughts #happiness #asalilife #stoicism",
+    "video_file": "marcus-aurelius.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-05-31T21:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "steve-martin",
+    "speaker": "Steve Martin",
+    "caption": "\"Be so good they can't ignore you.\" \u2014 Steve Martin\n\n#stevemartin #excellence #sogood #mastery #asalilife #standout",
+    "video_file": "steve-martin.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-06-01T11:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "coco-chanel",
+    "speaker": "Coco Chanel",
+    "caption": "\"The most courageous act is still to think for yourself. Aloud.\" \u2014 Coco Chanel\n\n#cocochanel #courage #independent #fashion #asalilife #thinkforyourself",
+    "video_file": "coco-chanel.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-06-01T17:00:00-04:00",
+    "status": "pending"
+  },
+  {
+    "id": "fredrick-douglass",
+    "speaker": "Frederick Douglass",
+    "caption": "\"If there is no struggle, there is no progress.\" \u2014 Frederick Douglass\n\n#frederickdouglass #struggle #progress #freedom #asalilife #fightforit",
+    "video_file": "fredrick-douglass.mp4",
+    "media_type": "REELS",
+    "publish_time": "2026-06-01T21:00:00-04:00",
+    "status": "pending"
   }
 ]

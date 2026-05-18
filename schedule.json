@@ -66,7 +66,10 @@
     "video_file_id": "10pYvlAX0UvvpiRzXRPr5nh-PGLeO8QuT",
     "publish_time": "2026-05-14T11:00:00-04:00",
     "notion_page_id": "32d0de74b1cf8195b715dfaec1c4da7b",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfHgtLCOe8/",
+    "fb_id": "1292183449167901",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "muhammad-ali",
@@ -76,7 +79,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-14T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8146-bfd7-c56a860698e1",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfHonWle-N/",
+    "fb_id": "2523297821441208",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "nelson-mandela",
@@ -86,7 +92,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-14T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81f9-8423-ffbd23de70ee",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfHsn0jC8l/",
+    "fb_id": "1294076925609403",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "bruce-lee",
@@ -96,7 +105,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-15T15:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8130-a839-f9552715c369",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfHxYBFtKn/",
+    "fb_id": "1509467667223611",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "walt-disney",
@@ -106,7 +118,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-15T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81d6-9a0c-d11109600c1b",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfH17KgPD9/",
+    "fb_id": "3040035216190929",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "albert-einstein",
@@ -116,7 +131,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-15T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8159-b9b1-f6d5589791ea",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfH8bojeuj/",
+    "fb_id": "1333900051934372",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "mlk",
@@ -126,7 +144,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-16T15:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81d0-8fbd-e70b441d4658",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfIB86ghgs/",
+    "fb_id": "1897331247634695",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "will-smith",
@@ -136,7 +157,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-16T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8186-be6e-c486241894f5",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfIHRsE6JS/",
+    "fb_id": "1637480760865882",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "dwayne-johnson",
@@ -146,7 +170,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-16T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8163-b4fd-d2eebb9a11a0",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfIM0hk425/",
+    "fb_id": "1304964085108964",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "conor-mcgregor",
@@ -156,7 +183,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-17T15:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-811e-b36f-eda4cb34d3df",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfIRxpkoxR/",
+    "fb_id": "1299064515134042",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "jay-z",
@@ -166,7 +196,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-17T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-817f-94c2-fc708158f99e",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfIXITFGAD/",
+    "fb_id": "1662938981314954",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "bob-marley",
@@ -176,7 +209,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-17T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81d9-ac09-c244f0169864",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYfIgneAKZu/",
+    "fb_id": "999112225891853",
+    "published_at": "2026-05-18T16:10:06.907850+00:00"
   },
   {
     "id": "winston-churchill",

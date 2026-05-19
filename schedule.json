@@ -222,7 +222,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-18T15:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8137-a37b-e255cff4636b",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYgJcsODxTY/",
+    "fb_id": "1357014542963164",
+    "published_at": "2026-05-19T01:46:22.291826+00:00"
   },
   {
     "id": "theodore-roosevelt",
@@ -232,7 +235,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-18T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81ed-81bd-eaa24f61b6c8",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYgJiaKgTsQ/",
+    "fb_id": "1622107245534961",
+    "published_at": "2026-05-19T01:46:22.291826+00:00"
   },
   {
     "id": "mark-twain",
@@ -242,7 +248,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-18T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81c3-b363-c2fed93061cc",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYgJoCxDEbb/",
+    "fb_id": "2042642356627785",
+    "published_at": "2026-05-19T01:46:22.291826+00:00"
   },
   {
     "id": "steve-harvey",

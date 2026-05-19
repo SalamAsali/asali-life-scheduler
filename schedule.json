@@ -261,7 +261,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-19T15:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8117-bd50-e74588f78f38",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYiRXvyGki-/",
+    "fb_id": "1916832615688144",
+    "published_at": "2026-05-19T21:34:04.262464+00:00"
   },
   {
     "id": "tony-robbins",
@@ -271,7 +274,7 @@
     "media_type": "REELS",
     "publish_time": "2026-05-19T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81df-ae68-c9a8f6051b12",
-    "status": "pending"
+    "status": "failed"
   },
   {
     "id": "gary-vee",

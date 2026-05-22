@@ -274,7 +274,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-19T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81df-ae68-c9a8f6051b12",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpiwQZDC5s/",
+    "fb_id": "1289014610015490",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "gary-vee",
@@ -284,7 +287,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-19T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-812b-8823-d391ae752e16",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpi6AoFbuH/",
+    "fb_id": "1651506816128688",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "barack-obama",
@@ -294,7 +300,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-20T15:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8177-82a2-fba77a5bee00",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpjFtQgLMi/",
+    "fb_id": "1440082014585406",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "mike-tyson",
@@ -304,7 +313,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-20T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8164-ba96-c39941e7f426",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpjOjCj86T/",
+    "fb_id": "1354632893179655",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "eminem",
@@ -314,7 +326,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-20T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-818b-a47a-c6c7071620c9",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpjZzUjQu1/",
+    "fb_id": "1311305597079254",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "serena-williams",
@@ -324,7 +339,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-21T11:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81be-a7cc-db996b4a1ead",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpje87DPgl/",
+    "fb_id": "2162745774523295",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "lebron-james",
@@ -334,7 +352,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-21T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-8111-a6e0-cf1cca827e12",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpjkiECtUc/",
+    "fb_id": "1303526691956500",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "tom-brady",
@@ -344,7 +365,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-21T21:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81ae-a83d-f4a6d1c49254",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpjpjsAMwH/",
+    "fb_id": "943589501989075",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "tupac",
@@ -354,7 +378,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-22T11:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-8101-8d30-de4a93225ff6",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DYpjuiiCD81/",
+    "fb_id": "1681122922992040",
+    "published_at": "2026-05-22T17:19:48.246261+00:00"
   },
   {
     "id": "nipsey-hussle",

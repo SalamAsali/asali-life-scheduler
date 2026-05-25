@@ -274,7 +274,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-23T11:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81df-ae68-c9a8f6051b12",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "(published but couldn't verify, media_id=18108360635310886)",
+    "fb_id": "935650109520517",
+    "published_at": "2026-05-25T13:25:08.965886+00:00"
   },
   {
     "id": "gary-vee",
@@ -284,7 +287,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-23T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-812b-8823-d391ae752e16",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "(published but couldn't verify, media_id=18118098895781746)",
+    "fb_id": "2146174532841439",
+    "published_at": "2026-05-25T13:25:08.965886+00:00"
   },
   {
     "id": "barack-obama",
@@ -294,7 +300,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-23T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8177-82a2-fba77a5bee00",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "(published but couldn't verify, media_id=17872789608505046)",
+    "fb_id": "1329169792421708",
+    "published_at": "2026-05-25T13:25:08.965886+00:00"
   },
   {
     "id": "mike-tyson",
@@ -304,7 +313,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-24T11:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8164-ba96-c39941e7f426",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "(published but couldn't verify, media_id=18184529860380792)",
+    "fb_id": "1346091030756270",
+    "published_at": "2026-05-25T13:25:08.965886+00:00"
   },
   {
     "id": "eminem",
@@ -314,7 +326,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-24T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-818b-a47a-c6c7071620c9",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "(published but couldn't verify, media_id=18093617636221370)",
+    "fb_id": "1763480801479086",
+    "published_at": "2026-05-25T13:25:08.965886+00:00"
   },
   {
     "id": "serena-williams",
@@ -324,7 +339,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-24T21:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81be-a7cc-db996b4a1ead",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "(published but couldn't verify, media_id=18360098107231221)",
+    "fb_id": "1496580185269048",
+    "published_at": "2026-05-25T13:25:08.965886+00:00"
   },
   {
     "id": "lebron-james",

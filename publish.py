@@ -8,6 +8,7 @@ import json
 import os
 import sys
 import time
+import urllib.error
 import urllib.request
 import urllib.parse
 from datetime import datetime, timezone
@@ -33,14 +34,24 @@ def save_schedule(schedule):
 def api_post(url, params):
     data = urllib.parse.urlencode(params).encode()
     req = urllib.request.Request(url, data=data, method="POST")
-    resp = urllib.request.urlopen(req)
-    return json.loads(resp.read())
+    try:
+        resp = urllib.request.urlopen(req)
+        return json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"  API POST error {e.code}: {body}")
+        raise
 
 
 def api_get(url):
     req = urllib.request.Request(url)
-    resp = urllib.request.urlopen(req)
-    return json.loads(resp.read())
+    try:
+        resp = urllib.request.urlopen(req)
+        return json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"  API GET error {e.code}: {body}")
+        raise
 
 
 def get_media_url(post):
@@ -65,15 +76,23 @@ def publish_to_instagram(media_url, caption, media_type="REELS"):
     else:
         params["image_url"] = media_url
 
-    result = api_post(f"https://graph.facebook.com/v25.0/{IG_ID}/media", params)
-    container_id = result["id"]
-    print(f"  [IG] Container: {container_id}")
+    try:
+        result = api_post(f"https://graph.facebook.com/v25.0/{IG_ID}/media", params)
+        container_id = result["id"]
+        print(f"  [IG] Container: {container_id}")
+    except Exception as e:
+        print(f"  [IG] Container creation failed: {e}")
+        return None
 
     for i in range(120):
-        status = api_get(
-            f"https://graph.facebook.com/v25.0/{container_id}"
-            f"?fields=status_code&access_token={TOKEN}"
-        )
+        try:
+            status = api_get(
+                f"https://graph.facebook.com/v25.0/{container_id}"
+                f"?fields=status_code&access_token={TOKEN}"
+            )
+        except Exception as e:
+            print(f"  [IG] Status check failed: {e}")
+            return None
         code = status.get("status_code", "")
         if code == "FINISHED":
             print(f"  [IG] Processing complete")
@@ -86,17 +105,25 @@ def publish_to_instagram(media_url, caption, media_type="REELS"):
         print(f"  [IG] Timeout waiting for processing")
         return None
 
-    pub = api_post(
-        f"https://graph.facebook.com/v25.0/{IG_ID}/media_publish",
-        {"creation_id": container_id, "access_token": TOKEN},
-    )
-    media_id = pub["id"]
+    try:
+        pub = api_post(
+            f"https://graph.facebook.com/v25.0/{IG_ID}/media_publish",
+            {"creation_id": container_id, "access_token": TOKEN},
+        )
+        media_id = pub["id"]
+    except Exception as e:
+        print(f"  [IG] Publish failed: {e}")
+        return None
 
-    verify = api_get(
-        f"https://graph.facebook.com/v25.0/{media_id}"
-        f"?fields=permalink&access_token={TOKEN}"
-    )
-    permalink = verify.get("permalink", "")
+    try:
+        verify = api_get(
+            f"https://graph.facebook.com/v25.0/{media_id}"
+            f"?fields=permalink&access_token={TOKEN}"
+        )
+        permalink = verify.get("permalink", "")
+    except Exception:
+        permalink = f"(published but couldn't verify, media_id={media_id})"
+
     print(f"  [IG] Published: {permalink}")
     return permalink
 

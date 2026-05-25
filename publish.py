@@ -84,13 +84,19 @@ def publish_to_instagram(media_url, caption, media_type="REELS"):
         print(f"  [IG] Container creation failed: {e}")
         return None
 
+    # Poll for processing status; fall back to blind wait if status check is unauthorized
+    status_check_ok = True
     for i in range(120):
         try:
             status = api_get(
                 f"https://graph.facebook.com/v25.0/{container_id}"
                 f"?fields=status_code&access_token={TOKEN}"
             )
-        except Exception as e:
+        except urllib.error.HTTPError as e:
+            if e.code in (400, 403):
+                print(f"  [IG] Status check unauthorized, falling back to timed wait...")
+                status_check_ok = False
+                break
             print(f"  [IG] Status check failed: {e}")
             return None
         code = status.get("status_code", "")
@@ -104,6 +110,11 @@ def publish_to_instagram(media_url, caption, media_type="REELS"):
     else:
         print(f"  [IG] Timeout waiting for processing")
         return None
+
+    if not status_check_ok:
+        # Wait a fixed time for video processing (2 min for short reels)
+        print(f"  [IG] Waiting 120s for video processing...")
+        time.sleep(120)
 
     try:
         pub = api_post(

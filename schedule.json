@@ -274,7 +274,7 @@
     "media_type": "REELS",
     "publish_time": "2026-05-23T11:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81df-ae68-c9a8f6051b12",
-    "status": "failed"
+    "status": "pending"
   },
   {
     "id": "gary-vee",
@@ -284,7 +284,7 @@
     "media_type": "REELS",
     "publish_time": "2026-05-23T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-812b-8823-d391ae752e16",
-    "status": "failed"
+    "status": "pending"
   },
   {
     "id": "barack-obama",
@@ -294,7 +294,7 @@
     "media_type": "REELS",
     "publish_time": "2026-05-23T21:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8177-82a2-fba77a5bee00",
-    "status": "failed"
+    "status": "pending"
   },
   {
     "id": "mike-tyson",
@@ -304,7 +304,7 @@
     "media_type": "REELS",
     "publish_time": "2026-05-24T11:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-8164-ba96-c39941e7f426",
-    "status": "failed"
+    "status": "pending"
   },
   {
     "id": "eminem",
@@ -314,7 +314,7 @@
     "media_type": "REELS",
     "publish_time": "2026-05-24T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-818b-a47a-c6c7071620c9",
-    "status": "failed"
+    "status": "pending"
   },
   {
     "id": "serena-williams",
@@ -324,7 +324,7 @@
     "media_type": "REELS",
     "publish_time": "2026-05-24T21:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81be-a7cc-db996b4a1ead",
-    "status": "failed"
+    "status": "pending"
   },
   {
     "id": "lebron-james",

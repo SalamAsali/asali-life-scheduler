@@ -287,7 +287,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-26T17:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-812b-8823-d391ae752e16",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "(published but couldn't verify, media_id=18114497539839067)",
+    "fb_id": "4404569856454504",
+    "published_at": "2026-05-26T21:37:20.605759+00:00"
   },
   {
     "id": "barack-obama",

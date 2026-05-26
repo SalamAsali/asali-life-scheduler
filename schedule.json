@@ -274,7 +274,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-26T11:00:00-04:00",
     "notion_page_id": "35e0de74-b1cf-81df-ae68-c9a8f6051b12",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "(published but couldn't verify, media_id=18121704085581650)",
+    "fb_id": "1357001296241341",
+    "published_at": "2026-05-26T16:25:09.714966+00:00"
   },
   {
     "id": "gary-vee",

@@ -365,7 +365,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-28T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81ae-a83d-f4a6d1c49254",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DY5dvSOkaMh/",
+    "fb_id": "2217170882427301",
+    "published_at": "2026-05-28T21:44:30.867107+00:00"
   },
   {
     "id": "tupac",

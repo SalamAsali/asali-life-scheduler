@@ -404,7 +404,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-29T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-8178-b0ad-e5314da76e06",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DY8CKMricq1/",
+    "fb_id": "1620044452412079",
+    "published_at": "2026-05-29T21:40:38.457361+00:00"
   },
   {
     "id": "morgan-freeman",

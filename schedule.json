@@ -443,7 +443,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-30T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-8133-94e6-c7d6a50d7617",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DY-laAvDUgH/",
+    "fb_id": "976859685075289",
+    "published_at": "2026-05-30T21:27:00.595843+00:00"
   },
   {
     "id": "gandhi",

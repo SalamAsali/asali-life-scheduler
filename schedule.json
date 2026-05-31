@@ -482,7 +482,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-31T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81c4-a65d-d5f82ce8f8ec",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZBKF9tCJxj/",
+    "fb_id": null,
+    "published_at": "2026-05-31T21:26:55.431030+00:00"
   },
   {
     "id": "warren-buffett",

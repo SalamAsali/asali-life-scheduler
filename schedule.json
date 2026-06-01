@@ -508,7 +508,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-01T11:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81f1-aef8-d78b98fe4ce2",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZDQBR3jtoT/",
+    "fb_id": "1346112654062148",
+    "published_at": "2026-06-01T16:57:11.821983+00:00"
   },
   {
     "id": "jeff-bezos",

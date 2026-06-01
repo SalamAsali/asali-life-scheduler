@@ -495,7 +495,10 @@
     "media_type": "REELS",
     "publish_time": "2026-05-31T21:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-8196-a371-d0f11c1d84e6",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZBnxcJir4L/",
+    "fb_id": "879659385157979",
+    "published_at": "2026-06-01T01:45:56.012018+00:00"
   },
   {
     "id": "henry-ford",

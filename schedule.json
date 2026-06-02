@@ -547,7 +547,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-02T11:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-8128-b5f0-c39541d9b158",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZFyQiqAVBq/",
+    "fb_id": "909295285506724",
+    "published_at": "2026-06-02T16:34:51.929054+00:00"
   },
   {
     "id": "zig-ziglar",

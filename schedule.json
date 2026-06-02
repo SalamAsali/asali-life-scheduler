@@ -534,7 +534,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-01T21:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-8191-a91d-cdd8c841af90",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZEM6hdCM6G/",
+    "fb_id": "1190248479839631",
+    "published_at": "2026-06-02T01:49:16.218368+00:00"
   },
   {
     "id": "eric-thomas",

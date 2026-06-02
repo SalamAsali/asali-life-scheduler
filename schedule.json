@@ -560,7 +560,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-02T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-812a-9f20-c764e7651d39",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZGXlc0DNOV/",
+    "fb_id": "1327263729548022",
+    "published_at": "2026-06-02T22:01:02.919896+00:00"
   },
   {
     "id": "simon-sinek",

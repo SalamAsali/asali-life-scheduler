@@ -638,7 +638,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-04T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81d0-b45a-d052a01dd3f3",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZLelNsgGu0/",
+    "fb_id": "2080445369536511",
+    "published_at": "2026-06-04T21:38:19.833958+00:00"
   },
   {
     "id": "helen-keller",

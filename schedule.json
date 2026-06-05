@@ -651,7 +651,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-04T21:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-818a-9df4-eef4cf8402a6",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZL6sJ2j8E0/",
+    "fb_id": "1342678667779622",
+    "published_at": "2026-06-05T01:43:25.992093+00:00"
   },
   {
     "id": "usain-bolt",

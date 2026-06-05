@@ -664,7 +664,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-05T11:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81c4-a98f-d7860178ad2e",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZNdA7mgTg5/",
+    "fb_id": "1680336186445387",
+    "published_at": "2026-06-05T16:03:09.339275+00:00"
   },
   {
     "id": "michael-phelps",

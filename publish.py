@@ -2,6 +2,7 @@
 Asali.Life Instagram & Facebook Auto-Publisher
 Reads schedule.json, publishes any pending posts whose time has passed.
 Runs via GitHub Actions cron. Supports both video reels and image posts.
+Optionally syncs status back to Notion if NOTION_API_KEY is set.
 """
 
 import json
@@ -16,9 +17,11 @@ from datetime import datetime, timezone
 TOKEN = os.environ["META_PAGE_ACCESS_TOKEN"]
 IG_ID = os.environ["INSTAGRAM_BUSINESS_ACCOUNT_ID"]
 PAGE_ID = os.environ["META_PAGE_ID"]
+NOTION_TOKEN = os.environ.get("NOTION_API_KEY", "")
 REPO = "SalamAsali/asali-life-scheduler"
 
 SCHEDULE_FILE = os.path.join(os.path.dirname(__file__), "schedule.json")
+MAX_PER_RUN = 1  # 3 cron runs/day × 1 = 3 posts/day
 
 
 def load_schedule():
@@ -54,6 +57,36 @@ def api_get(url):
         raise
 
 
+def preflight_token():
+    """Verify Meta token validity; warn if expiring soon, fail loudly if dead."""
+    try:
+        info = api_get(
+            f"https://graph.facebook.com/v25.0/debug_token"
+            f"?input_token={TOKEN}&access_token={TOKEN}"
+        )
+        data = info.get("data", {})
+    except Exception as e:
+        print(f"FATAL: token preflight failed: {e}")
+        sys.exit(1)
+
+    if not data.get("is_valid"):
+        print(f"FATAL: META_PAGE_ACCESS_TOKEN is invalid: {data}")
+        sys.exit(1)
+
+    expires_at = data.get("expires_at", 0)
+    if expires_at:
+        days_left = (expires_at - time.time()) / 86400
+        if days_left < 0:
+            print(f"FATAL: token expired {-days_left:.1f} days ago")
+            sys.exit(1)
+        if days_left < 7:
+            print(f"WARNING: token expires in {days_left:.1f} days — rotate soon")
+        else:
+            print(f"[OK] Token valid, expires in {days_left:.1f} days")
+    else:
+        print("[OK] Token valid (no expiry)")
+
+
 def get_media_url(post):
     """Get the public URL for the media file."""
     if "video_file_id" in post:
@@ -66,7 +99,7 @@ def get_media_url(post):
 
 
 def publish_to_instagram(media_url, caption, media_type="REELS"):
-    """Create container, wait for processing, publish."""
+    """Create container, poll for processing, publish."""
     print(f"  [IG] Creating container ({media_type})...")
 
     params = {"caption": caption, "access_token": TOKEN}
@@ -84,19 +117,13 @@ def publish_to_instagram(media_url, caption, media_type="REELS"):
         print(f"  [IG] Container creation failed: {e}")
         return None
 
-    # Poll for processing status; fall back to blind wait if status check is unauthorized
-    status_check_ok = True
-    for i in range(120):
+    for _ in range(120):
         try:
             status = api_get(
                 f"https://graph.facebook.com/v25.0/{container_id}"
                 f"?fields=status_code&access_token={TOKEN}"
             )
-        except urllib.error.HTTPError as e:
-            if e.code in (400, 403):
-                print(f"  [IG] Status check unauthorized, falling back to timed wait...")
-                status_check_ok = False
-                break
+        except Exception as e:
             print(f"  [IG] Status check failed: {e}")
             return None
         code = status.get("status_code", "")
@@ -110,11 +137,6 @@ def publish_to_instagram(media_url, caption, media_type="REELS"):
     else:
         print(f"  [IG] Timeout waiting for processing")
         return None
-
-    if not status_check_ok:
-        # Wait a fixed time for video processing (2 min for short reels)
-        print(f"  [IG] Waiting 120s for video processing...")
-        time.sleep(120)
 
     try:
         pub = api_post(
@@ -161,10 +183,44 @@ def publish_to_facebook(media_url, caption, media_type="REELS"):
         return None
 
 
-MAX_PER_RUN = 1  # Publish at most 1 post per cron run to maintain 3/day cadence
+def notion_mark_published(page_id, ig_permalink, fb_id):
+    """Patch the Notion page: Status=Published, store links. No-op if NOTION_API_KEY unset."""
+    if not NOTION_TOKEN or not page_id:
+        return
+
+    url = f"https://api.notion.com/v1/pages/{page_id}"
+    body = {
+        "properties": {
+            "Status": {"status": {"name": "Published"}},
+            "Instagram URL": {"url": ig_permalink or None},
+            "Facebook ID": {"rich_text": [{"text": {"content": fb_id or ""}}]},
+            "Published At": {
+                "date": {"start": datetime.now(timezone.utc).isoformat()}
+            },
+        }
+    }
+    data = json.dumps(body).encode()
+    req = urllib.request.Request(
+        url,
+        data=data,
+        method="PATCH",
+        headers={
+            "Authorization": f"Bearer {NOTION_TOKEN}",
+            "Notion-Version": "2022-06-28",
+            "Content-Type": "application/json",
+        },
+    )
+    try:
+        urllib.request.urlopen(req)
+        print(f"  [Notion] Updated page {page_id[:8]}...")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"  [Notion] Update failed {e.code}: {body}")
 
 
 def main():
+    preflight_token()
+
     schedule = load_schedule()
     now = datetime.now(timezone.utc)
     published_count = 0
@@ -195,6 +251,7 @@ def main():
                 post["ig_permalink"] = ig_link
                 post["fb_id"] = fb_id
                 post["published_at"] = now.isoformat()
+                notion_mark_published(post.get("notion_page_id"), ig_link, fb_id)
                 published_count += 1
             else:
                 post["status"] = "failed"

@@ -1,12 +1,14 @@
 """
-Weekly token rotation.
+Weekly token health check + auto-extension.
 
-Uses the long-lived USER token to fetch a fresh PAGE token from /me/accounts,
-then updates the META_PAGE_ACCESS_TOKEN GitHub secret via the gh CLI.
+With the App Secret available, this self-heals indefinitely:
+  1. Debug-checks the user token. If it's invalid, opens an alert issue.
+  2. If user token is within 14 days of expiry (or already long-lived),
+     calls fb_exchange_token to mint a fresh ~60-day user token.
+  3. Derives a page token via /me/accounts.
+  4. Updates GitHub secrets.
 
-If the USER token itself is within 14 days of expiry, opens a GitHub issue
-asking the user to regenerate it from Graph API Explorer (this part can't be
-fully automated without the App Secret).
+Required env: META_USER_ACCESS_TOKEN, META_APP_ID, META_APP_SECRET, META_PAGE_ID, GH_TOKEN
 """
 
 import json
@@ -15,9 +17,12 @@ import subprocess
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 USER_TOKEN = os.environ["META_USER_ACCESS_TOKEN"]
+APP_ID = os.environ["META_APP_ID"]
+APP_SECRET = os.environ["META_APP_SECRET"]
 PAGE_ID = os.environ["META_PAGE_ID"]
 REPO = "SalamAsali/asali-life-scheduler"
 
@@ -45,8 +50,30 @@ def open_issue(title, body):
         print(f"  Failed to open issue: {e.stderr}")
 
 
+def exchange_for_long_lived(token):
+    """Mint a fresh long-lived user token via fb_exchange_token."""
+    params = urllib.parse.urlencode({
+        "grant_type": "fb_exchange_token",
+        "client_id": APP_ID,
+        "client_secret": APP_SECRET,
+        "fb_exchange_token": token,
+    })
+    url = f"https://graph.facebook.com/v25.0/oauth/access_token?{params}"
+    return api_get(url)["access_token"]
+
+
+def set_secret(name, value):
+    try:
+        gh("secret", "set", name, "--repo", REPO, stdin=value)
+        print(f"  Updated {name}")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"  Failed to update {name}: {e.stderr.strip()}")
+        return False
+
+
 def main():
-    # Check user token expiry first
+    # Check user token validity
     debug = api_get(
         f"https://graph.facebook.com/v25.0/debug_token"
         f"?input_token={USER_TOKEN}&access_token={USER_TOKEN}"
@@ -54,10 +81,14 @@ def main():
     info = debug.get("data", {})
     if not info.get("is_valid"):
         open_issue(
-            "Meta USER token is invalid — manual rotation needed",
-            "The stored `META_USER_ACCESS_TOKEN` is no longer valid. "
-            "Regenerate from https://developers.facebook.com/tools/explorer/ "
-            "and update the GitHub secret. Until then, scheduled posts will fail.",
+            "Meta USER token invalid — manual rotation needed",
+            "The stored `META_USER_ACCESS_TOKEN` failed validation. This usually "
+            "means the FB password was changed or the app permissions were revoked.\n\n"
+            "Recovery: regenerate a short-lived token from "
+            "https://developers.facebook.com/tools/explorer/ and run:\n\n"
+            "```\necho 'NEW_SHORT_TOKEN' | gh secret set META_USER_ACCESS_TOKEN --repo "
+            f"{REPO}\n```\n\nThen manually trigger the refresh workflow — it'll exchange "
+            "for long-lived and roll forward.",
         )
         sys.exit(1)
 
@@ -65,21 +96,19 @@ def main():
     days_left = (expires_at - time.time()) / 86400 if expires_at else 9999
     print(f"User token: {days_left:.1f} days until expiry")
 
-    if 0 < days_left < 14:
-        open_issue(
-            f"Meta USER token expires in {days_left:.0f} days — rotate it",
-            "Open Graph API Explorer, generate a new user token with the same scopes "
-            "(`pages_show_list`, `business_management`, `instagram_basic`, "
-            "`instagram_content_publish`, `pages_read_engagement`, `pages_manage_posts`, "
-            "`instagram_manage_comments`, `instagram_manage_contents`, "
-            "`instagram_manage_engagement`), then run:\n\n"
-            "```\necho 'NEW_TOKEN' | gh secret set META_USER_ACCESS_TOKEN --repo "
-            f"{REPO}\n```\n\nNext run of this workflow will derive a fresh page token from it.",
-        )
+    # Refresh proactively: exchange whenever <14d left or expiry < 60d
+    # (60d cap covers the case where a "permanent" token might still rotate)
+    if days_left < 14 or (0 < days_left < 60):
+        print("Exchanging for fresh long-lived user token...")
+        new_user_token = exchange_for_long_lived(USER_TOKEN)
+        set_secret("META_USER_ACCESS_TOKEN", new_user_token)
+        token_for_pages = new_user_token
+    else:
+        token_for_pages = USER_TOKEN
 
-    # Fetch fresh page token from /me/accounts
+    # Derive page token
     accounts = api_get(
-        f"https://graph.facebook.com/v25.0/me/accounts?access_token={USER_TOKEN}"
+        f"https://graph.facebook.com/v25.0/me/accounts?access_token={token_for_pages}"
     )
     page = next((p for p in accounts.get("data", []) if p["id"] == PAGE_ID), None)
     if not page:
@@ -88,7 +117,6 @@ def main():
 
     new_page_token = page["access_token"]
 
-    # Verify it works
     verify = api_get(
         f"https://graph.facebook.com/v25.0/debug_token"
         f"?input_token={new_page_token}&access_token={new_page_token}"
@@ -99,23 +127,13 @@ def main():
 
     print(f"Derived fresh page token for {page['name']}")
 
-    # Try to update the secret. The default workflow token can't write secrets,
-    # so this only succeeds if REPO_PAT (fine-grained PAT, secrets:write) is set.
-    # Falls back to opening an issue with the new token for manual paste.
-    try:
-        gh("secret", "set", "META_PAGE_ACCESS_TOKEN", "--repo", REPO, stdin=new_page_token)
-        print("Updated META_PAGE_ACCESS_TOKEN secret")
-    except subprocess.CalledProcessError as e:
+    if not set_secret("META_PAGE_ACCESS_TOKEN", new_page_token):
         open_issue(
             "Fresh Meta page token ready — paste it into the secret",
-            f"Couldn't auto-update the secret (`{e.stderr.strip()}`).\n\n"
-            "Run locally:\n\n"
-            "```\n"
-            f"echo '{new_page_token}' | gh secret set META_PAGE_ACCESS_TOKEN --repo {REPO}\n"
-            "```\n\n"
-            "To make this automatic next time: create a fine-grained PAT at "
-            "https://github.com/settings/tokens?type=beta with "
-            "Secrets: read+write on this repo, save it as the `REPO_PAT` secret.",
+            "Couldn't auto-update the secret (likely because `REPO_PAT` isn't configured).\n\n"
+            "Create a fine-grained PAT at https://github.com/settings/tokens?type=beta "
+            "with Secrets: read+write on this repo, save it as `REPO_PAT` secret. "
+            "After that, future refresh runs are fully automatic.",
         )
 
 

@@ -677,7 +677,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-11T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-8196-94b0-dd7cc13ba497",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZdhCQRj1tG/",
+    "fb_id": "1548044450058604",
+    "published_at": "2026-06-11T21:46:08.162239+00:00"
   },
   {
     "id": "grant-cardone",

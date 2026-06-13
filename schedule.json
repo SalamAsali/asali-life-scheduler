@@ -739,7 +739,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-13T11:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81ab-b777-d0555abdc206",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZiAjaQm43Q/",
+    "fb_id": "1036474515583764",
+    "published_at": "2026-06-13T15:37:48.717722+00:00"
   },
   {
     "id": "marcus-aurelius",

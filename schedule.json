@@ -752,7 +752,10 @@
     "media_type": "REELS",
     "publish_time": "2026-06-13T17:00:00-04:00",
     "notion_page_id": "35f0de74-b1cf-81c0-9389-dab115de1052",
-    "status": "pending"
+    "status": "published",
+    "ig_permalink": "https://www.instagram.com/reel/DZipUn7ETgy/",
+    "fb_id": "2125503102176604",
+    "published_at": "2026-06-13T21:34:03.985749+00:00"
   },
   {
     "id": "steve-martin",
